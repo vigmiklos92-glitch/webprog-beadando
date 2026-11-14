@@ -1,18 +1,18 @@
 <?php
 $ablakcim = array(
-    'cim' => 'Mini honlap Kft.',
+    'cim' => 'Vaszilij EDC – Webprogramozás beadandó',
 );
 
 $fejlec = array(
     'kepforras' => 'logo.png',
-    'kepalt' => 'logo',
-	'cim' => 'Mini honlap',
-	'motto' => ''
+    'kepalt' => 'Logó',
+    'cim' => 'Vaszilij EDC',
+    'motto' => 'Kések, felszerelések és mindennapi praktikák'
 );
 
 $lablec = array(
     'copyright' => 'Copyright '.date("Y").'.',
-    'ceg' => 'Mini honlap Kft.'
+    'ceg' => 'Vaszilij EDC – Hallgatói mintaprojekt'
 );
 
 $oldalak = array(
