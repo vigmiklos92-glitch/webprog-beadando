@@ -1,9 +1,10 @@
 <?php session_start(); ?>
 <?php if(file_exists('./logicals/'.$keres['fajl'].'.php')) { include("./logicals/{$keres['fajl']}.php"); } ?>
 <!DOCTYPE html>
-<html>
+<html lang="hu">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?= $ablakcim['cim'] . ( (isset($ablakcim['mottó'])) ? ('|' . $ablakcim['mottó']) : '' ) ?></title>
 	<link rel="stylesheet" href="./styles/stilus.css" type="text/css">
 	<?php if(file_exists('./styles/'.$keres['fajl'].'.css')) { ?><link rel="stylesheet" href="./styles/<?= $keres['fajl']?>.css" type="text/css"><?php } ?>
@@ -13,11 +14,11 @@
 		<img src="./images/<?=$fejlec['kepforras']?>" alt="<?=$fejlec['kepalt']?>">
 		<h1><?= $fejlec['cim'] ?></h1>
 		<?php if (isset($fejlec['motto'])) { ?><h2><?= $fejlec['motto'] ?></h2><?php } ?>
-		<?php if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?>
+		<?php if(isset($_SESSION['login'])) { ?>Bejelentkezett: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?>
 	</header>
     <div id="wrapper">
-        <aside id="nav">
-            <nav>
+        <div id="nav">
+    		<nav aria-label="Főmenü">
                 <ul>
 					<?php foreach ($oldalak as $url => $oldal) { ?>
 						<?php if(! isset($_SESSION['login']) && $oldal['menun'][0] || isset($_SESSION['login']) && $oldal['menun'][1]) { ?>
@@ -29,10 +30,9 @@
 					<?php } ?>
                 </ul>
             </nav>
-        </aside>
-        <div id="content">
+               <main id="content">
             <?php include("./templates/pages/{$keres['fajl']}.tpl.php"); ?>
-        </div>
+        </main>
     </div>
     <footer>
         <?php if(isset($lablec['copyright'])) { ?>&copy;&nbsp;<?= $lablec['copyright'] ?> <?php } ?>
