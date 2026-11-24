@@ -1,0 +1,26 @@
+CREATE TABLE szerelo (
+    az INT NOT NULL AUTO_INCREMENT,
+    nev VARCHAR(100) NOT NULL,
+    kezdev SMALLINT NOT NULL,
+    PRIMARY KEY (az)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE hely (
+    az INT NOT NULL AUTO_INCREMENT,
+    telepules VARCHAR(100) NOT NULL,
+    utca VARCHAR(150) NOT NULL,
+    PRIMARY KEY (az)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE munkalap (
+    az INT NOT NULL AUTO_INCREMENT,
+    bedatum DATE NOT NULL,
+    javdatum DATE NOT NULL,
+    helyaz INT NOT NULL,
+    szereloaz INT NOT NULL,
+    munkaora DECIMAL(6,2) NOT NULL,
+    anyagar DECIMAL(12,2) NOT NULL,
+    PRIMARY KEY (az),
+    FOREIGN KEY (helyaz) REFERENCES hely(az)
+        ON DELETE RESTRICT,
+    FOREIGN KEY (szereloaz) REFERENCES szerelo(az)
+        ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
