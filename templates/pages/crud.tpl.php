@@ -1,6 +1,12 @@
 
 <h2>Szerelők nyilvántartása</h2>
-
+<?php if (isset($_SESSION['login'])): ?>
+    <p>
+        <a href="crud-uj">Új szerelő felvétele</a>
+    </p>
+<?php else: ?>
+    <p>Új szerelő felvételéhez jelentkezz be!</p>
+<?php endif; ?>
 <?php if ($hiba !== ''): ?>
     <p><?= htmlspecialchars($hiba, ENT_QUOTES, 'UTF-8') ?></p>
 

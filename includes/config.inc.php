@@ -32,12 +32,17 @@ $oldalak = array(
         'szoveg' => 'Kapcsolat',
         'menun' => array(1,1)
     ),
-    'crud' => array(
-        'fajl' => 'crud',
-        'szoveg' => 'CRUD',
-        'menun' => array(1,1)
-    ),
-    'uzenetek' => array(
+   'crud' => array(
+    'fajl' => 'crud',
+    'szoveg' => 'CRUD',
+    'menun' => array(1, 1)
+),
+'crud-uj' => array(
+    'fajl' => 'crud_uj',
+    'szoveg' => '',
+    'menun' => array(0, 0)
+),
+'uzenetek' => array(
         'fajl' => 'uzenetek',
         'szoveg' => 'Üzenetek',
         'menun' => array(0,1)
