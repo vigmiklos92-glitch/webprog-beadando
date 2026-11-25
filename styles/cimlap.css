@@ -1,44 +1,115 @@
+.cimlap-wrap,
+.cimlap-wrap * {
+    box-sizing: border-box;
+}
+
 .cimlap-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 .cimlap-hero {
-    padding: 1.25rem;
-    border-radius: 8px;
-    background-color: #f4f5f7;
-    border-left: 4px solid #b84a27;
+    background: #f4f4f4;
+    border-left: 4px solid #b3392b;
+    padding: 1.25rem 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
 }
 
 .cimlap-hero h2 {
     margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.cimlap-hero p {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
 }
 
 .cimlap-forras {
-    margin-bottom: 0;
+    display: inline-block;
     font-weight: 600;
+    color: #8f2419;
+    text-decoration: underline;
 }
 
 .cimlap-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
 }
 
 .cimlap-kartya {
-    padding: 1.1rem;
+    background: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    background-color: #ffffff;
+    padding: 1.15rem;
+    min-width: 0;
 }
 
 .cimlap-kartya h3 {
     margin-top: 0;
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
 }
 
-@media (min-width: 768px) {
-    .cimlap-grid {
-        grid-template-columns: repeat(3, 1fr);
+.cimlap-kartya p {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+}
+
+.cimlap-kartya p:last-child {
+    margin-bottom: 0;
+}
+
+.cimlap-media {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.cimlap-media .cimlap-kartya {
+    margin: 0;
+}
+
+.media-keret {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cimlap-media video {
+    width: 100%;
+    height: 220px;
+    display: block;
+    border-radius: 8px;
+    background: #000;
+    object-fit: cover;
+}
+
+.media-keret iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 900px) {
+    .cimlap-grid,
+    .cimlap-media {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .cimlap-grid,
+    .cimlap-media {
+        grid-template-columns: 1fr;
     }
 }
