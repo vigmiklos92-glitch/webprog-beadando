@@ -64,8 +64,8 @@
     margin-bottom: 0;
 }
 
-.cimlap-media {
-    display: grid;
+.cimlap-wrap > section.cimlap-media {
+    display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
@@ -102,14 +102,14 @@
 
 @media (max-width: 900px) {
     .cimlap-grid,
-    .cimlap-media {
+    .cimlap-wrap > section.cimlap-media {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 600px) {
     .cimlap-grid,
-    .cimlap-media {
+    .cimlap-wrap > section.cimlap-media {
         grid-template-columns: 1fr;
     }
 }
