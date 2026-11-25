@@ -1,7 +1,7 @@
 <div class="kepek-wrap">
     <section class="kepek-fejlec">
         <h2>Képek</h2>
-        <p>Ide kerül a képgaléria – Vaszilij EDC: kések, multiszerszámok és mindennapi felszerelések.</p>
+        <p>A galériában a Vaszilij EDC témájához kapcsolódó kések, multiszerszámok és mindennapi felszerelések válogatott fotói láthatók. – Vaszilij EDC: kések, multiszerszámok és mindennapi felszerelések.</p>
     </section>
 
     <section class="kepek-feltoltes-blokk" aria-label="Képfeltöltés">
